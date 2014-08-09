@@ -107,3 +107,9 @@ function openAdvancedOptions(event) {
     elements[i].style.display = (elements[i].style.display == "table-row") ? "none" : "table-row";
   event.preventDefault();
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  initializeOptions();
+  document.getElementById("restoreSettings").addEventListener("click", restoreToDefaults);
+  document.getElementById("saveOptions").addEventListener("click", saveOptions);
+});
