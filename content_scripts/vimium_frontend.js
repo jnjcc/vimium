@@ -1016,11 +1016,11 @@ function showHelpDialog(html, fid) {
   container.getElementsByClassName("closeButton")[0].addEventListener("click", hideHelpDialog, false);
   VimiumHelpDialog = {
     // This setting is pulled out of local storage. It's false by default.
-    advancedCommandsVisible: {{showAdvancedCommands}},
-    
+    advancedCommandsVisible: settings.get("helpDialog_showAdvancedCommands"),
+
     init: function() {
       this.dialogElement = document.getElementById("vimiumHelpDialog");
-      this.dialogElement.getElementsByClassName("toggleAdvancedCommands")[0].addEventListener("click", 
+      this.dialogElement.getElementsByClassName("toggleAdvancedCommands")[0].addEventListener("click",
           VimiumHelpDialog.toggleAdvancedCommands, false);
       this.dialogElement.style.maxHeight = window.innerHeight - 80;
       this.showAdvancedCommands(this.advancedCommandsVisible);
