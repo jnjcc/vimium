@@ -1,5 +1,5 @@
-function onload() {
-  document.getelementbyid("optionslink").setattribute("href", chrome.extension.geturl("options.html"));
+function onLoad() {
+  document.getElementById("optionsLink").setAttribute("href", chrome.extension.getURL("options.html"));
   chrome.tabs.getSelected(null, function(tab) {
     // The common use case is to disable Vimium at the domain level.
     // This regexp will match "http://www.example.com/" from "http://www.example.com/path/to/page.html".
