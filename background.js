@@ -600,7 +600,8 @@ function handleKeyDown(request, port) {
   }
   else {
     console.log("checking keyQueue: [", keyQueue + key, "]");
-    keyQueue = checkKeyQueue(keyQueue + key, port.tab.id, request.frameId);
+    // keyQueue = checkKeyQueue(keyQueue + key, port.tab.id, request.frameId);
+    keyQueue = checkKeyQueue(keyQueue + key, port.sender.tab.id, request.frameId);
     console.log("new KeyQueue: " + keyQueue);
   }
 }
